@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <title>Introduction</title>
+  </head>
+  <body>
+    <h1 style="text-align: center">Angular Extends HTML</h1>
+    <p>
+      AngularJS extends HTML with ng-directives. <br />
+
+      The ng-app directive defines an AngularJS
+      <application class="br"></application>
+
+      The ng-model directive binds the value of HTML controls (input, select,
+      textarea) to application data. <br />
+
+      The ng-bind directive binds application data to the HTML view.
+    </p>
+    <br />
+
+    <!-- ng-model is like DOM and ng-bind used to call the DOM values -->
+
+    <div ng-app="" ng-init="firstName = 'John'">
+      <p>Name <input type="text" ng-model="name" /></p>
+      <p ng-bind="name"></p> <!--It is ng-bind-->
+      <p>Name is <span ng-bind="firstName"></span></p>  <!--It is ng-init and ng bind-->
+      <p>{{5+5}}</p>  <!--It is expression-->
+    </div>
+  </body>
+</html>
